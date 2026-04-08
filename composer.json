@@ -1,0 +1,21 @@
+{
+    "name": "edilsonjrdev99/buscador-items-alura",
+    "description": "Projeto teste referente a aula sobre composer da Alura, lib para buscar os items de um HTML de site",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "edilson junior",
+            "email": "edilsonjrdev99@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.10",
+        "symfony/dom-crawler": "^8.0",
+        "symfony/css-selector": "^8.0"
+    }
+}
