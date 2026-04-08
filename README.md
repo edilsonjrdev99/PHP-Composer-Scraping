@@ -1,4 +1,4 @@
-# Buscador de cursos da Alura
+# Buscador de items de um HTML da Alura
 
 ### Como iniciar o composer no projeto
 
@@ -21,8 +21,8 @@
 
 ```json
 {
-    "name": "junin/buscador-curso-alura",
-    "description": "Projeto teste referente a aula sobre composer da Alura, lib para buscar os cursos de PHP da alura",
+    "name": "edilsonjrdev99/buscador-items-alura",
+    "description": "Projeto teste referente a aula sobre composer da Alura, lib para buscar os items de um HTML de site",
     "type": "library",
     "autoload": {
         "psr-4": {
@@ -35,7 +35,11 @@
             "email": "edilsonjrdev99@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "^7.10",
+        "symfony/dom-crawler": "^8.0",
+        "symfony/css-selector": "^8.0"
+    }
 }
 
 ```
