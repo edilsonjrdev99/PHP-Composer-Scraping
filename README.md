@@ -183,3 +183,13 @@ Como rodar os comandos
 ```shell
 composer test-version
 ```
+
+Como criar um script responsável por executar vários scripts do `composer.json`: Basta criar um script novo e no seu valor adicionar um array com os nomes dos scripts, é importante usar o `@` para referenciar o script, exemplo:
+
+```json
+"check": [
+    "@test-version",
+    "@phpcs",
+    "@phan"
+]
+```

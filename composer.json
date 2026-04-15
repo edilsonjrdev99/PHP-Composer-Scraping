@@ -16,7 +16,12 @@
     "scripts": {
         "test-version": "phpunit --version",
         "phpcs": "phpcs --standard=psr12 src || true",
-        "phan": "phan --init"
+        "phan": "phan --init",
+        "check": [
+            "@test-version",
+            "@phpcs",
+            "@phan"
+        ]
     },
     "authors": [
         {
