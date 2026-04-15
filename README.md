@@ -166,3 +166,20 @@ php vendor/bin/phan --init
 php vendor/bin/phan
 ```
 
+### Como criar scripts para rodar comandos no composer
+
+Para criar scripts no `composer.json` é simples, basta adicionar o campo de `scripts` e dentro dele definir o nome do script e o comando que ele vai executar, um ponto interessante é que arquivos executáveis do `vendor/bin` não precisamos definir, ele encontra automaticamente
+
+```json
+"scripts": {
+    "test-version": "phpunit --version",
+    "phpcs": "phpcs --standard=psr12 src || true",
+    "phan": "phan --init"
+},
+```
+
+Como rodar os comandos
+
+```shell
+composer test-version
+```

@@ -13,6 +13,11 @@
             "./functions.php"
         ]
     },
+    "scripts": {
+        "test-version": "phpunit --version",
+        "phpcs": "phpcs --standard=psr12 src || true",
+        "phan": "phan --init"
+    },
     "authors": [
         {
             "name": "edilson junior",
