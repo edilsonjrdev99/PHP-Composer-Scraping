@@ -5,7 +5,6 @@ require __DIR__ . "/vendor/autoload.php";
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 use App\SearchEngine;
-use App\Console;
 
 $client       = new Client(['base_uri' => 'https://books.toscrape.com/']);
 $crawler      = new Crawler();
@@ -14,5 +13,5 @@ $items        = $searchEngine->getHTMLItems('.product_pod h3 a');
 
 // Exibe os items que vieram do HTML
 foreach($items as $key => $item) {
-  echo Console::green($item) . PHP_EOL;
+  echo printMessageSuccess($item);
 }
