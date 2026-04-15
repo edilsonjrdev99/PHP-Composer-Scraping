@@ -196,7 +196,7 @@ Como criar um script responsável por executar vários scripts do `composer.json
 
 ### Como adicionar descrição dos scripts
 
-Basta adicionar o campo `script-descriptions` e colocar o nome do script e sua descrição, exemplo:
+Basta adicionar o campo `scripts-descriptions` e colocar o nome do script e sua descrição, exemplo:
 
 ```json
 "scripts-descriptions": {
@@ -208,5 +208,23 @@ Basta adicionar o campo `script-descriptions` e colocar o nome do script e sua d
 ```
 
 ### Tipos de eventos no composer
+
+Para definir um evento, por exemplo rodar um script após um `composer update`, basta adicionar um evento dentro do laço de script, os tipos de eventos estão na referência abaixo
+
+```json
+"scripts": {
+    "test-version": "vendor/bin/phpunit --version",
+    "phpcs": "phpcs --standard=psr12 src || true",
+    "phan": "phan --init",
+    "check": [
+        "@test-version",
+        "@phpcs",
+        "@phan"
+    ],
+    "post-update-cmd": [
+        "php index.php"
+    ]
+},
+```
 
 [Eventos do composer](https://getcomposer.org/doc/articles/scripts.md#command-events);

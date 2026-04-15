@@ -14,13 +14,16 @@
         ]
     },
     "scripts": {
-        "test-version": "phpunit --version",
+        "test-version": "vendor/bin/phpunit --version",
         "phpcs": "phpcs --standard=psr12 src || true",
         "phan": "phan --init",
         "check": [
             "@test-version",
             "@phpcs",
             "@phan"
+        ],
+        "post-update-cmd": [
+            "php index.php"
         ]
     },
     "scripts-descriptions": {
