@@ -23,6 +23,12 @@
             "@phan"
         ]
     },
+    "scripts-descriptions": {
+        "test-version": "Script que retorna a versão do PHP Unit",
+        "phpcs": "Script responsável por verificar se existe erros de padrões de código de acordo com a PSR12",
+        "phan": "Script responsável por iniciar a config da ferramenta que verifica erros de código Phan",
+        "check": "Script que executa os scripts de test-version, phpcs e phan"
+    },
     "authors": [
         {
             "name": "edilson junior",

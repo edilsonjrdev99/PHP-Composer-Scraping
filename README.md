@@ -193,3 +193,20 @@ Como criar um script responsável por executar vários scripts do `composer.json
     "@phan"
 ]
 ```
+
+### Como adicionar descrição dos scripts
+
+Basta adicionar o campo `script-descriptions` e colocar o nome do script e sua descrição, exemplo:
+
+```json
+"scripts-descriptions": {
+    "test-version": "Script que retorna a versão do PHP Unit",
+    "phpcs": "Script responsável por verificar se existe erros de padrões de código de acordo com a PSR12",
+    "phan": "Script responsável por iniciar a config da ferramenta que verifica erros de código Phan",
+    "check": "Script que executa os scripts de test-version, phpcs e phan"
+},
+```
+
+### Tipos de eventos no composer
+
+[Eventos do composer](https://getcomposer.org/doc/articles/scripts.md#command-events);
