@@ -227,4 +227,4 @@ Para definir um evento, por exemplo rodar um script após um `composer update`, 
 },
 ```
 
-[Eventos do composer](https://getcomposer.org/doc/articles/scripts.md#command-events);
+<a href="https://getcomposer.org/doc/articles/scripts.md#command-events" target="_blank">Eventos do composer</a>
