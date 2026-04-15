@@ -124,3 +124,17 @@ return array(
 ```
 
 ***Diferenças entre os 3 tipos***: O recomendado para usar atualmente é a `psr-4`, ele cria um mapeamento do namespace com pastas e carrega as classes automaticamente quando usadas. O `classmap` é menos performático do que o `psr-4` porque ele precisa procurar a classe no mapa e é utilizado para classes legado que não podem implementar a `psr-4`. O `files` deve ser usado com cuidado porque ele vai sempre carregar os arquivos, se o arquivo mapeado tiver funções pesadas isso pode prejudicar a performance do projeto.
+
+### Dependências apenas para desenvolvimento
+
+Podemos definir que algumas libs vão ser utilizadas somente em ambiente de desenvolvimento, para isso usamos a flag `--dev`, agora para definirmos que vamos instalar somente as dependências que não são dev usamos a flag `composer install --no-dev`
+
+Exemplo de um comando de uma ferramenta que utilizamos somente em ambiente de desenvolvimento: `composer require --dev phpunit/phpunit ^13`
+
+### Arquivos executáveis do composer
+
+Quando alguma lib possui um arquivo executável, como o caso do `PHP Unit` esses arquivos ficam em `vendor/bin/arquivo.php` e podemos executalos com: `php vendor/bin/arquivo-executavel parametro`
+
+```shell
+php vendor/bin/phpunit --version
+```
