@@ -133,8 +133,36 @@ Exemplo de um comando de uma ferramenta que utilizamos somente em ambiente de de
 
 ### Arquivos executáveis do composer
 
-Quando alguma lib possui um arquivo executável, como o caso do `PHP Unit` esses arquivos ficam em `vendor/bin/arquivo.php` e podemos executalos com: `php vendor/bin/arquivo-executavel parametro`
+Quando alguma lib possui um arquivo executável, como o caso do `PHP Unit` esses arquivos ficam em `vendor/bin/arquivo.php` e podemos executalos com: `php vendor/bin/arquivo-executavel --parametro`
 
 ```shell
 php vendor/bin/phpunit --version
+php vendor/bin/phpcs --standard=PSR12 src/
 ```
+
+### Dicas de libs
+
+- `squizlabs/php_codesniffer`: Verifica qualidade do código de acordo com algum padrão, por exemplo `psr12`
+
+```shell
+# instalação
+composer require --dev squizlabs/php_codesniffer
+
+# define padrão e pasta onde ele deve verificar
+php vendor/bin/phpcs --standard=PSR12 src/ 
+```
+
+- `phan/phan`: Verifica se existe algum erro ou bug no código
+
+```shell
+# intalação
+composer require --dev phan/phan
+
+# rodando o phan direto pelo terminal
+php vendor/bin/phan --allow-polyfill-parser -d src
+
+# rodando com o arquivo de .phan/config
+php vendor/bin/phan --init
+php vendor/bin/phan
+```
+

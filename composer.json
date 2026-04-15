@@ -25,6 +25,8 @@
         "symfony/css-selector": "^8.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^13"
+        "phpunit/phpunit": "^13",
+        "squizlabs/php_codesniffer": "^4.0",
+        "phan/phan": "^6.0"
     }
 }
