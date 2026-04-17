@@ -228,3 +228,15 @@ Para definir um evento, por exemplo rodar um script após um `composer update`, 
 ```
 
 <a href="https://getcomposer.org/doc/articles/scripts.md#command-events" target="_blank">Eventos do composer</a>
+
+### Entendendo como versionar um projeto
+
+A versão é separada por 3 tipos:
+
+Exemplo: `1.2.3`
+
+1. MAJOR: Quando a atualização faz uma alteração de compatibilidade, que pode quebrar o código de quem está na versão antiga, você deve versionar a `MAJOR`, exemplo alterar um retorno de `array` para `Collection`, alteramos o primeiro número, no caso o `1.2.3` para `2.2.3`
+
+2. MINOR: Quando adicionamos algo novo e mantemos tudo o que já existe funcionando alteramos o segundo valor, `1.2.3` para `1.3.3`
+
+3. PATCH: Quando acontece alguma correção de bug ou uma alteraçãozinha, mudamos o terceiro `1.2.3` para `1.2.4`
