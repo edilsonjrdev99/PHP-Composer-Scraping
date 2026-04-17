@@ -32,6 +32,9 @@
         "phan": "Script responsável por iniciar a config da ferramenta que verifica erros de código Phan",
         "check": "Script que executa os scripts de test-version, phpcs e phan"
     },
+    "bin": [
+        "bin/buscador"
+    ],
     "authors": [
         {
             "name": "edilson junior",
