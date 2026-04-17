@@ -33,7 +33,7 @@
         "check": "Script que executa os scripts de test-version, phpcs e phan"
     },
     "bin": [
-        "bin/buscador"
+        "bin/index"
     ],
     "authors": [
         {
